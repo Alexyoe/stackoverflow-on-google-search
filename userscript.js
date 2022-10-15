@@ -7,6 +7,7 @@
 // @include      http*://www.google.*/search*
 // @include      http*://google.*/search*
 // @run-at       document-end
+// @license MIT
 // ==/UserScript==
 
 // Change this to false if you don't want an icon
