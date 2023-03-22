@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Stack Overflow on Google Search
-// @version      2.0.0
+// @version      2.0.1
 // @description  Adds a button to search stackoverflow via Google Search
 // @author       Alexyoe
 // @namespace    https://github.com/Alexyoe/stackoverflow-search-on-google.git
@@ -61,6 +61,6 @@ if (typeof trustedTypes !== "undefined") {
   const buttonBox = document.querySelector(".TrmO7");
   buttonBox.classList.add("size-fix");
   const buttonBoxCSS = document.createElement("style");
-  buttonBoxCSS.innerHTML = ".size-fix { width: 100% !important; }";
+  buttonBoxCSS.innerHTML = ".size-fix { width: fit-content !important; }";
   document.head.appendChild(buttonBoxCSS);
 })();
