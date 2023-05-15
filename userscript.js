@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Stack Overflow on Google Search
-// @version      2.0.2
+// @version      2.0.3
 // @description  Adds a button to search stackoverflow via Google Search
 // @author       Alexyoe
 // @namespace    https://github.com/Alexyoe/stackoverflow-search-on-google.git
@@ -10,6 +10,10 @@
 // @license MIT
 // ==/UserScript==
 
+// Settings
+const iconVisible = true;
+
+// Start Code
 const queryRegex = /q=[^&]+/g;
 const siteRegex = /\+site(?:%3A|\:).+\.[^&+]+/g;
 const stackoverflowUrl = "+site%3Astackoverflow.com";
@@ -31,11 +35,13 @@ if (typeof trustedTypes !== "undefined") {
   el.className = isImageSearch ? "NZmxZe" : "zItAnd FOU1zf GMT2kb";
 
   // Add icon to the link
-  const span = document.createElement("span");
-  span.className = isImageSearch ? "m3kSL" : "mUKzod";
-  span.style.cssText = "height:16px;width:16px";
-  span.innerHTML = stackoverflowIcon;
-  el.appendChild(span);
+  if (iconVisible) {
+    const span = document.createElement("span");
+    span.className = isImageSearch ? "m3kSL" : "mUKzod";
+    span.style.cssText = "height:16px;width:16px;display:block";
+    span.innerHTML = stackoverflowIcon;
+    el.appendChild(span);
+  }
 
   // Create the div element for the text
   const link = document.createElement("div");
@@ -50,17 +56,15 @@ if (typeof trustedTypes !== "undefined") {
   );
 
   // Insert the link into Google search
-  const menuBar = document.querySelector(isImageSearch ? ".T47uwc" : ".nfdoRb");
   if (isImageSearch) {
+    let menuBar = document.querySelector(".T47uwc");
     menuBar.insertBefore(el, menuBar.children[menuBar.childElementCount - 1]);
   } else {
+    let menuBar = document.querySelectorAll(".nfdoRb")[1];
     menuBar.appendChild(el);
   }
 
   // Fix Sizing
-  const buttonBox = document.querySelector(".TrmO7");
-  buttonBox.classList.add("size-fix");
-  const buttonBoxCSS = document.createElement("style");
-  buttonBoxCSS.innerHTML = ".size-fix { min-width: fit-content !important; }";
-  document.head.appendChild(buttonBoxCSS);
+  const buttonBox = document.querySelector(".xhjkHe");
+  buttonBox.style.width = "auto";
 })();
