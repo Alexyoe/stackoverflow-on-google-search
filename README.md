@@ -18,10 +18,22 @@ The direct download link is here:
 
 ## Settings
 
-This userscript provides a settings section at the top of `userscript.js`, allowing you to easily enable or disable icons according to your preferences.
+This userscript provides a settings section at the top of `userscript.js`, allowing you to easily customize the script according to your preferences.
 
 To disable icons, simply change the variable `iconVisible` to `false`
 
+```
++-------------+---------------+------------------------+---------+
+| Name        | Value         | Description            | Type    |
++-------------+---------------+------------------------+---------+
+| iconVisible | true/false    | Show or hide icon      | boolean |
++-------------+---------------+------------------------+---------+
+| nameVisible | true/false    | Show or hide name      | boolean |
++-------------+---------------+------------------------+---------+
+| btnPosition | "start"/"end" | Set position of button | string  |
++-------------+---------------+------------------------+---------+
+```
+
 ## Credit
 
-This is a fork of marioortizmanero's [Reddit-search-on-google](https://github.com/marioortizmanero/reddit-search-on-google)
+Check out my other user scripts over at: [Alexyoe's User Scripts](https://greasyfork.org/en/users/971278-alexyoe)
