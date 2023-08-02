@@ -20,8 +20,6 @@ The direct download link is here:
 
 This userscript provides a settings section at the top of `userscript.js`, allowing you to easily customize the script according to your preferences.
 
-To disable icons, simply change the variable `iconVisible` to `false`
-
 ```
 +-------------+---------------+------------------------+---------+
 | Name        | Value         | Description            | Type    |
