@@ -65,6 +65,8 @@ If you find this script helpful, consider buying me a coffee on [Ko-fi](https://
 [Github-on-Google-Search](https://github.com/Alexyoe/Github-on-Google-Search)
 [Stackoverflow-on-Google-Search](https://github.com/Alexyoe/stackoverflow-on-google-search)
 
+---
+
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
