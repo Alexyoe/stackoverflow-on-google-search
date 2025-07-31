@@ -4,10 +4,15 @@
 // @description  Adds a button to search stackoverflow via Google Search
 // @author       Alexyoe
 // @namespace    https://github.com/Alexyoe/stackoverflow-search-on-google.git
+// @license MIT
 // @include      http*://www.google.*/search*
 // @include      http*://google.*/search*
 // @run-at       document-end
-// @license MIT
+// @grant        GM_getValue
+// @grant        GM_setValue
+// @grant        GM_registerMenuCommand
+// @downloadURL https://update.greasyfork.org/scripts/453125/Stack%20Overflow%20on%20Google%20Search.user.js
+// @updateURL https://update.greasyfork.org/scripts/453125/Stack%20Overflow%20on%20Google%20Search.meta.js
 // ==/UserScript==
 
 // Settings
