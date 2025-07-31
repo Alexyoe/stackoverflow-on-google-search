@@ -123,7 +123,7 @@ if (typeof trustedTypes !== "undefined") {
   }
 
   // optional: prevent wrapping
-  if (settings.fixSize) {
+  if (settings.fixSize == "true") {
     nav.style.maxWidth = "inherit";
     nav.style.overflowX = "auto";
     nav.style.whiteSpace = "nowrap";
