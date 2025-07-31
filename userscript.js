@@ -52,7 +52,7 @@ const queryRegex = /q=[^&]+/g;
 const siteRegex = /\+site(?:%3A|\:).+\.[^&+]+/g;
 const stackoverflowUrl = "+site%3Astackoverflow.com";
 let stackoverflowIcon =
-  '<svg class="DCxYpf" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 384 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>';
+  '<svg class="DCxYpf" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 384 512"><path d="M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>';
 const isImageSearch = /[?&]tbm=isch/.test(location.search);
 
 // Trusted Types for CSP
@@ -104,7 +104,7 @@ if (typeof trustedTypes !== "undefined") {
   } else {
     const iconWrapper = document.createElement("span");
     iconWrapper.className = "R1QWuf";
-    iconWrapper.style.lineHeight = "17px";
+    iconWrapper.style.lineHeight = "15px";
     iconWrapper.innerHTML = stackoverflowIcon;
     inner.appendChild(iconWrapper);
   }
