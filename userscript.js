@@ -15,13 +15,37 @@
 // @updateURL https://update.greasyfork.org/scripts/453125/Stack%20Overflow%20on%20Google%20Search.meta.js
 // ==/UserScript==
 
-// Settings
+// Default settings
 const settings = {
-  // Choose exactly one: "icon" or "label"
-  displayMode: "icon",
-  btnPosition: "start", // "start", "end", or "afterai"
-  fixSize: false,
+  displayMode: GM_getValue("displayMode", "icon"),
+  btnPosition: GM_getValue("btnPosition", "start"),
+  fixSize: GM_getValue("fixSize", "false"),
 };
+
+// Save helper
+function save() {
+  GM_setValue("displayMode", settings.displayMode);
+  GM_setValue("btnPosition", settings.btnPosition);
+  GM_setValue("fixSize", settings.fixSize);
+}
+
+// Configure command that prompts for each setting
+GM_registerMenuCommand("⚙️ Configure Stack Overflow Button…", () => {
+  const dm = prompt("displayMode? (icon or label)", settings.displayMode);
+  if (dm === "icon" || dm === "label") {
+    settings.displayMode = dm;
+  }
+  const bp = prompt("btnPosition? (start, end, afterai)", settings.btnPosition);
+  if (["start", "end", "afterai"].includes(bp)) {
+    settings.btnPosition = bp;
+  }
+  const fs = prompt("Prevent wrapping? (true, false)", settings.fixSize);
+  if (["true", "false"].includes(bp)) {
+    settings.fixSize = fs;
+  }
+  save();
+  location.reload();
+});
 
 // Start Code
 const queryRegex = /q=[^&]+/g;
